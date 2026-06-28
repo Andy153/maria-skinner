@@ -79,7 +79,7 @@ export default function CatalogPage({
             ¿Te interesa alguno?
           </h2>
           <p className="mt-3 text-sm text-muted sm:mt-4 sm:text-base">
-            Escribinos por WhatsApp o completá el formulario de pedidos.
+            Escribinos por WhatsApp para hacer tu pedido.
           </p>
           <Link
             href={ctaHref}

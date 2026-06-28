@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Libre_Baskerville, Montserrat } from "next/font/google";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 import "./globals.css";
 
 const libreBaskerville = Libre_Baskerville({
@@ -41,6 +42,7 @@ export default function RootLayout({
         <Nav />
         <main className="min-w-0 flex-1 pt-[4.5rem] lg:pt-28">{children}</main>
         <Footer />
+        <WhatsAppFloat />
       </body>
     </html>
   );

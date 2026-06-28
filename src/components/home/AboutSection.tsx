@@ -5,14 +5,9 @@ import Image from "next/image";
 
 const identityPhotos = [
   {
-    src: "/images/identidad/maria-cocina-elaboracion.jpeg",
-    alt: "María elaborando tortas y vasitos en su cocina",
-    className: "row-span-2",
-  },
-  {
     src: "/images/identidad/maria-alfajores-chocolate.jpeg",
     alt: "María bañando alfajorcitos en chocolate",
-    className: "",
+    className: "row-span-2",
   },
   {
     src: "/images/identidad/maria-cocina-preparacion.jpeg",
@@ -24,18 +19,13 @@ const identityPhotos = [
     alt: "Bandeja de alfajorcitos recién hechos",
     className: "",
   },
-  {
-    src: "/images/identidad/maria-cocina-vasitos.jpeg",
-    alt: "María terminando vasitos y tortas en la cocina",
-    className: "",
-  },
 ];
 
 export default function AboutSection() {
   return (
     <FadeInSection className="bg-brown px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
       <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2 lg:gap-16">
-        <div className="grid aspect-[4/5] grid-cols-2 grid-rows-3 gap-2 sm:gap-3">
+        <div className="grid aspect-[4/5] grid-cols-2 grid-rows-2 gap-2 sm:gap-3">
           {identityPhotos.map((photo) => (
             <div
               key={photo.src}

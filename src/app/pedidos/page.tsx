@@ -1,10 +1,9 @@
-import OrderForm from "@/components/OrderForm";
 import type { Metadata } from "next";
 import { businessInfo } from "@/data/business";
 
 export const metadata: Metadata = {
   title: "Pedidos — María Skinner",
-  description: "Contactanos para hacer tu pedido. Retiro en Arenales y Suipacha, CABA.",
+  description: "Contactanos por WhatsApp para hacer tu pedido. Retiro en Arenales y Suipacha, CABA.",
 };
 
 const { phoneDisplay, phoneDisplayIntl, phoneHref, whatsappHref, instagramHref, instagramHandle, address, area, hours, orderNote } =
@@ -31,20 +30,15 @@ export default function PedidosPage() {
             Hacer un pedido
           </h1>
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-sand/90 sm:mt-4 sm:text-base md:text-lg">
-            Contanos qué te gustaría pedir y te respondemos a la brevedad.
+            Escribinos por WhatsApp y te respondemos a la brevedad.
             Retiro en {address}. {orderNote}.
           </p>
         </div>
       </section>
 
       <section className="px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-        <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-2 lg:gap-16">
-          <div className="min-w-0">
-            <h2 className="font-serif text-2xl text-brown sm:text-3xl">Escribinos</h2>
-            <OrderForm />
-          </div>
-
-          <div className="min-w-0 bg-sand px-5 py-8 sm:px-8 sm:py-10 lg:px-10 lg:py-12">
+        <div className="mx-auto max-w-xl">
+          <div className="bg-sand px-5 py-8 sm:px-8 sm:py-10 lg:px-10 lg:py-12">
             <h2 className="font-serif text-2xl text-brown sm:text-3xl">Información</h2>
             <div className="mt-6 space-y-5 text-brown sm:mt-8 sm:space-y-6">
               <div>
