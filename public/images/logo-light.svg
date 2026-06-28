@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="42 8 248 138" role="img" aria-labelledby="title desc">
+  <title id="title">Maria Skinner logo for light backgrounds</title>
+  <desc id="desc">Gold script MS monogram with dark Maria Skinner wordmark.</desc>
+  <text x="150" y="92" text-anchor="middle"
+    font-family="'Snell Roundhand', 'Apple Chancery', 'Brush Script MT', 'Segoe Script', cursive"
+    font-style="italic" font-size="92" fill="#C9A96E">MS</text>
+  <text x="150" y="132" text-anchor="middle"
+    font-family="'Helvetica Neue', Arial, sans-serif"
+    font-size="15" letter-spacing="6" fill="#2C2319">MARÍA SKINNER</text>
+</svg>

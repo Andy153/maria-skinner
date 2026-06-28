@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+@theme inline {
+  --font-serif: var(--font-libre-baskerville);
+  --font-sans: var(--font-montserrat);
+}
+
+html {
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: theme(colors.cream);
+  color: theme(colors.brown);
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-weight: 300;
+  overflow-x: clip;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee 30s linear infinite;
+}
