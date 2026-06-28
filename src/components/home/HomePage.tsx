@@ -43,7 +43,7 @@ export default function HomePage() {
               Pastelería artesanal · Buenos Aires
             </p>
             <h1 className="font-serif text-3xl leading-tight text-white sm:text-4xl md:text-5xl lg:text-[3.25rem] lg:leading-[1.15]">
-              Hecho con tiempo,{" "}
+              Hecho con dedicación,{" "}
               <em className="italic text-gold">con cariño</em>
             </h1>
             <p className="mt-4 max-w-lg text-sm leading-relaxed text-sand/90 sm:mt-6 sm:text-base md:text-lg">
@@ -123,7 +123,7 @@ export default function HomePage() {
             Para compartir en cualquier ocasión
           </h2>
           <p className="mt-4 max-w-md text-sm leading-relaxed text-muted sm:mt-6 sm:text-base md:text-lg">
-            Vasitos individuales, cajas surtidas y bolsas de copetín para
+            Vasitos individuales, cajas surtidas y bolsas de delicias para
             regalar o disfrutar en casa. Porciones perfectas, presentación
             impecable y el mismo cuidado artesanal que nuestras tortas.
           </p>

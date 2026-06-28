@@ -1,5 +1,6 @@
 "use client";
 
+import ImageLightbox from "@/components/ImageLightbox";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -13,23 +14,44 @@ export default function ProductImageCarousel({
   alt,
 }: ProductImageCarouselProps) {
   const [index, setIndex] = useState(0);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
   const hasMultiple = images.length > 1;
 
   const goTo = (next: number) => {
     setIndex((next + images.length) % images.length);
   };
 
+  const openLightbox = (imageIndex = index) => {
+    setIndex(imageIndex);
+    setLightboxOpen(true);
+  };
+
   return (
     <div className="min-w-0">
-      <div className="relative aspect-[4/3] overflow-hidden bg-sand">
+      <button
+        type="button"
+        onClick={() => openLightbox()}
+        className="relative block aspect-[4/3] w-full cursor-zoom-in overflow-hidden bg-sand"
+        aria-label={`Ampliar foto de ${alt}`}
+      >
         <Image
           src={images[index]}
           alt={`${alt} — foto ${index + 1} de ${images.length}`}
           fill
-          className="object-cover"
+          className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
-      </div>
+      </button>
+
+      {lightboxOpen && (
+        <ImageLightbox
+          images={images}
+          alt={alt}
+          index={index}
+          onClose={() => setLightboxOpen(false)}
+          onChangeIndex={setIndex}
+        />
+      )}
 
       {hasMultiple && (
         <div className="border-t border-border-warm bg-sand">
