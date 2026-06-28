@@ -6,19 +6,10 @@ import {
   buildOrderEmailText,
   type OrderInquiry,
 } from "@/lib/email/order-email";
+import type { OrderFormState } from "@/lib/order-form-state";
 import { Resend } from "resend";
 
 const ORDER_EMAIL_TO = process.env.ORDER_EMAIL_TO ?? "mariaskinner@yahoo.com";
-
-export type OrderFormState = {
-  success: boolean;
-  error: string | null;
-};
-
-const initialOrderFormState: OrderFormState = {
-  success: false,
-  error: null,
-};
 
 function getField(formData: FormData, key: string): string {
   const value = formData.get(key);
@@ -45,31 +36,31 @@ export async function sendOrderInquiry(
   _prevState: OrderFormState,
   formData: FormData,
 ): Promise<OrderFormState> {
-  const inquiry: OrderInquiry = {
-    nombre: getField(formData, "nombre"),
-    email: getField(formData, "email"),
-    telefono: getField(formData, "telefono"),
-    pedido: getField(formData, "pedido"),
-  };
-
-  const validationError = validateOrder(inquiry);
-  if (validationError) {
-    return { success: false, error: validationError };
-  }
-
-  const apiKey = process.env.RESEND_API_KEY;
-  const from = process.env.ORDER_EMAIL_FROM;
-
-  if (!apiKey || !from) {
-    console.error("Missing RESEND_API_KEY or ORDER_EMAIL_FROM");
-    return {
-      success: false,
-      error:
-        "El formulario todavía no está configurado. Escribinos por WhatsApp mientras tanto.",
-    };
-  }
-
   try {
+    const inquiry: OrderInquiry = {
+      nombre: getField(formData, "nombre"),
+      email: getField(formData, "email"),
+      telefono: getField(formData, "telefono"),
+      pedido: getField(formData, "pedido"),
+    };
+
+    const validationError = validateOrder(inquiry);
+    if (validationError) {
+      return { success: false, error: validationError };
+    }
+
+    const apiKey = process.env.RESEND_API_KEY;
+    const from = process.env.ORDER_EMAIL_FROM;
+
+    if (!apiKey || !from) {
+      console.error("Missing RESEND_API_KEY or ORDER_EMAIL_FROM");
+      return {
+        success: false,
+        error:
+          "El formulario todavía no está configurado. Escribinos por WhatsApp mientras tanto.",
+      };
+    }
+
     const resend = new Resend(apiKey);
 
     const { error } = await resend.emails.send({
@@ -98,5 +89,3 @@ export async function sendOrderInquiry(
     };
   }
 }
-
-export { initialOrderFormState };

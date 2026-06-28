@@ -1,9 +1,7 @@
 "use client";
 
-import {
-  initialOrderFormState,
-  sendOrderInquiry,
-} from "@/app/actions/send-order";
+import { sendOrderInquiry } from "@/app/actions/send-order";
+import { initialOrderFormState } from "@/lib/order-form-state";
 import { useActionState } from "react";
 
 const inputClassName =

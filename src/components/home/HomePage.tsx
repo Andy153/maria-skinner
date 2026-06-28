@@ -48,7 +48,7 @@ export default function HomePage() {
             </h1>
             <p className="mt-4 max-w-lg text-sm leading-relaxed text-sand/90 sm:mt-6 sm:text-base md:text-lg">
               Tortas, vasitos y delicias elaboradas a mano para quienes
-              aprecian lo bien hecho. Retiro en Arenales y Suipacha, CABA.
+              aprecian lo bien hecho.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-4">
               <Link
