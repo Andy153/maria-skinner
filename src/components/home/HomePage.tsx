@@ -2,6 +2,7 @@
 
 import AboutSection from "@/components/home/AboutSection";
 import HeroCarousel from "@/components/home/HeroCarousel";
+import ThematicMasitasSection from "@/components/home/ThematicMasitasSection";
 import ProductCard from "@/components/ProductCard";
 import FadeInSection from "@/components/ui/FadeInSection";
 import { businessInfo } from "@/data/business";
@@ -11,10 +12,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 const marqueeText =
-  "Torta brownie · Marquise · Lemon Pie · Rogel · Cheesecake · Vasitos · Scones · Cajas dulces · Deco de mesa";
+  "Torta brownie · Marquise · Lemon Pie · Rogel · Cheesecake · Vasitos · Masitas temáticas · Scones · Cajas dulces · Deco de mesa";
 
 const homePasteleriaPreview = pasteleriaProducts.slice(0, 3);
 const homeDecoPreview = decoProducts.slice(0, 3);
+const masitasTematicas = pasteleriaProducts.find(
+  (product) => product.id === "masitas-tematicas",
+);
 
 export default function HomePage() {
   return (
@@ -109,6 +113,8 @@ export default function HomePage() {
           </div>
         </div>
       </FadeInSection>
+
+      {masitasTematicas && <ThematicMasitasSection product={masitasTematicas} />}
 
       {/* SPLIT SECTION */}
       <FadeInSection as="div" className="grid lg:grid-cols-2">

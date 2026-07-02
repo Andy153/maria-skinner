@@ -181,6 +181,36 @@ export const pasteleriaProducts: Product[] = [
     price: "$15.000",
     category: "Delicias en bolsitas",
   },
+  {
+    id: "masitas-x35",
+    image: "/images/productos/IMG-20260610-WA0105.jpg",
+    images: [
+      "/images/productos/IMG-20260610-WA0105.jpg",
+      "/images/productos/IMG-20260610-WA0108.jpg",
+    ],
+    tag: "Caja",
+    name: "Masitas x 35",
+    description:
+      "Caja surtida con 35 unidades aprox. Alfajorcitos, brownies y más.",
+    price: "$15.000",
+    category: "Delicias en bolsitas",
+  },
+  {
+    id: "masitas-tematicas",
+    image: "/images/productos/IMG-20260323-WA0021.jpg",
+    images: [
+      "/images/productos/IMG-20260323-WA0021.jpg",
+      "/images/productos/IMG-20260630-WA0028.jpg",
+      "/images/productos/IMG-20260630-WA0023.jpg",
+      "/images/productos/20260323_172608.jpg",
+    ],
+    tag: "Especial",
+    name: "Masitas temáticas",
+    description:
+      "Galletitas decoradas a pedido para celebraciones y fechas especiales. Consultá motivos y precios.",
+    price: "Consultar motivos y precios",
+    category: "Delicias en bolsitas",
+  },
 ];
 
 export const decoProducts: Product[] = [
