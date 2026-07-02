@@ -10,16 +10,15 @@ export default function AboutSection() {
           Detrás de cada torta
         </p>
         <h2 className="font-serif text-3xl leading-snug text-cream sm:text-4xl md:text-[2.625rem]">
-          Hecho a mano,{" "}
-          <em className="italic text-gold">con dedicación</em>
+          Hecho con dedicación
         </h2>
         <p className="mt-5 text-sm leading-relaxed text-sand/90 sm:mt-6 sm:text-base md:text-lg">
-          Cada pedido pasa por la cocina de María: desde los alfajorcitos
-          bañados uno a uno, hasta las tortas, vasitos y cajas surtidas que
-          llegan a tu mesa. Sin atajos, con el mismo cuidado de siempre.
+          Recetas de familia que acompañan tus momentos más especiales.
         </p>
-        <p className="mt-4 text-sm leading-relaxed text-sand/75 sm:text-base">
-          Pastelería artesanal en Buenos Aires.
+        <p className="mt-4 text-sm leading-relaxed text-sand/90 sm:text-base md:text-lg">
+          Cada receta está elaborada con ingredientes de calidad, cuidando cada
+          detalle para hacer de tus celebraciones un momento único e
+          inolvidable.
         </p>
       </div>
     </FadeInSection>

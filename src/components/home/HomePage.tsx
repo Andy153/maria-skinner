@@ -42,13 +42,16 @@ export default function HomePage() {
             <p className="mb-3 text-xs uppercase tracking-[0.2em] text-gold sm:mb-4 sm:text-sm">
               Pastelería artesanal · Buenos Aires
             </p>
-            <h1 className="font-serif text-3xl leading-tight text-white sm:text-4xl md:text-5xl lg:text-[3.25rem] lg:leading-[1.15]">
-              Hecho con dedicación,{" "}
-              <em className="italic text-gold">con cariño</em>
+            <h1 className="font-serif text-2xl leading-snug text-white sm:text-3xl md:text-4xl lg:text-[2.35rem] lg:leading-[1.2]">
+              <span className="block">Hecho con dedicación.</span>
+              <em className="mt-2 block font-normal italic text-gold sm:mt-3">
+                Recetas de familia que acompañan tus momentos más especiales.
+              </em>
             </h1>
             <p className="mt-4 max-w-lg text-sm leading-relaxed text-sand/90 sm:mt-6 sm:text-base md:text-lg">
-              Tortas, vasitos y delicias elaboradas a mano para quienes
-              aprecian lo bien hecho.
+              Cada receta está elaborada con ingredientes de calidad, cuidando
+              cada detalle para hacer de tus celebraciones un momento único e
+              inolvidable.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-4">
               <Link
